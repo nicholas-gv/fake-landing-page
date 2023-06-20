@@ -1,0 +1,34 @@
+.container {
+    width: 70vw;
+    margin: 0 auto;
+}
+
+.skeleton {
+    background-color: #ececec;
+    border-radius: 5px;
+    margin: 15px 0px
+}
+
+.h500 {
+    height: 500px;
+}
+
+.h100 {
+    height: 100px;
+}
+
+.h50 {
+    height: 50px;
+}
+
+.w70 {
+    width: 70vw;
+}
+
+.w50 {
+    width: 50vw;
+}
+
+.w10 {
+    width: 10vw;
+}
