@@ -11,7 +11,7 @@ export default function EventCard({
 	image: NextImage;
 	title: string;
 	description: React.ReactNode;
-	eventKey: string;
+	eventKey: number;
 }) {
 	return (
 		<Link className={styles.card} href={`/events/${eventKey}`}>
