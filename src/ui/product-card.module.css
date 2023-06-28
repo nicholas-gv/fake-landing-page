@@ -1,0 +1,105 @@
+.cardOne {
+    width: 300px;
+    border: 1px solid #d6d6d6;
+    border-radius: 0px 0px 6px 6px;
+    margin: 0px 15px;
+    padding: 30px;
+    position: relative;
+    text-align: center;
+}
+
+.cardOne::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -1px;
+    width: calc(100% + 2px);
+    background-color: #d6d6d6;
+    height: 8px;
+    z-index: 10;
+    border-radius: 6px 6px 0px 0px;
+    
+}
+
+.cardTwo {
+    width: 300px;
+    border: 1px solid #d6d6d6;
+    border-radius: 0px 0px 6px 6px;
+    margin: 0px 15px;
+    padding: 30px;
+    position: relative;
+    text-align: center;
+}
+
+.cardTwo::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -1px;
+    width: calc(100% + 2px);
+    background-color: green;
+    height: 8px;
+    z-index: 10;
+    border-radius: 6px 6px 0px 0px;
+}
+
+.cardThree {
+    width: 300px;
+    border: 1px solid #d6d6d6;
+    border-radius: 0px 0px 6px 6px;
+    margin: 0px 15px;
+    padding: 30px;
+    position: relative;
+    text-align: center;
+}
+
+.cardThree::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -1px;
+    width: calc(100% + 2px);
+    background-color: #ff9500;
+    height: 8px;
+    z-index: 10;
+    border-radius: 6px 6px 0px 0px;
+}
+
+.cardOne > button, .cardTwo > button, .cardThree > button {
+    position: absolute;
+    bottom: 24px;
+    left: 32px;
+    right: 32px;
+}
+
+.unorderedList {
+    margin: auto;
+    color: #6a6a6a;
+    margin-bottom: 80px;
+    text-align: left;
+    margin-left: 5px;
+    line-height: 1.7;
+}
+
+.unorderedList > li::before {
+    content: url("/check-small-grey.png");
+    position: relative;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 3px;
+}
+
+.cardLabel {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.validityLabel {
+    margin-bottom: 20px;
+    color:#6a6a6a;
+}
