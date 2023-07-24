@@ -11,7 +11,7 @@ export default function Page() {
 	const pathname = usePathname();
 
 	useEffect(() => {
-		fetch(`http://localhost:8000/api/data/${pathname.replace("/events/", "")}`)
+		fetch(`/api/data/${pathname.replace("/events/", "")}`)
 			.then((response) => response.json())
 			.then((data) => setData(data))
 			.catch((error) => console.error("Error:", error));
