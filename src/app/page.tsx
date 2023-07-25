@@ -15,7 +15,9 @@ export default function Home() {
 					With the help of our innovative product, you will never have to worry about a particular
 					problem.
 				</p>
-				<button type="button" className={`buttonPrimary ${styles.mainMessageCTAButton}`}>Get Started</button>
+				<button type="button" className={`buttonPrimary ${styles.mainMessageCTAButton}`}>
+					Get Started
+				</button>
 			</div>
 			<LandingPageSegment
 				image={<Image src={orangeQuestionMark1} alt="orange-question-mark-1"></Image>}
