@@ -16,39 +16,21 @@ export default function LandingPageSegment({
 }) {
 	return (
 		<section
-			className={`${styles.section} ${
-				backgroundColor == "primary" ? styles.greenBackground : styles.whiteBackground
-			}`}
+			className={`${styles.section} 
+				${backgroundColor == "primary" ? styles.greenBackground : styles.whiteBackground} 
+				${textAlign === "left" ? "" : styles.reverse}`}
 		>
-			{textAlign == "left" ? (
-				<>
-					<div className={styles.messageDiv}>
-						<h2 className={styles.sectionMainMessage}>{title}</h2>
-						<p className={styles.description}>{description}</p>
-						<button
-							type="button"
-							className={backgroundColor == "primary" ? "buttonPrimary" : "buttonSecondary"}
-						>
-							Learn More
-						</button>
-					</div>
-					{image}
-				</>
-			) : (
-				<>
-					{image}
-					<div className={styles.messageDiv}>
-						<h2 className={styles.sectionMainMessage}>{title}</h2>
-						<p className={styles.description}>{description}</p>
-						<button
-							type="button"
-							className={backgroundColor == "primary" ? "buttonPrimary" : "buttonSecondary"}
-						>
-							Learn More
-						</button>
-					</div>
-				</>
-			)}
+			<div className={`${styles.messageDiv}`}>
+				<h2 className={styles.sectionMainMessage}>{title}</h2>
+				<p className={styles.description}>{description}</p>
+				<button
+					type="button"
+					className={backgroundColor == "primary" ? "buttonPrimary" : "buttonSecondary"}
+				>
+					Learn More
+				</button>
+			</div>
+			{image}
 		</section>
 	);
 }
