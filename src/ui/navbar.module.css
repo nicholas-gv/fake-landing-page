@@ -26,7 +26,8 @@
     display: inline-block;
     position: relative;
     color: green;
-  }
+    font-size: 18px;
+}
   
 .link::after {
     content: '';

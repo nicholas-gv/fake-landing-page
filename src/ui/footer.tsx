@@ -16,7 +16,7 @@ export default function Footer() {
 					</p>
 				</div>
 				<div>
-					<p>Social Media</p>
+					<p className={styles.footerNoteTitle}>Social Media</p>
 					<a className={styles.footerNote}>Facebook</a>
 					<a className={styles.footerNote}>Instagram</a>
 					<a className={styles.footerNote}>Youtube</a>
@@ -24,7 +24,7 @@ export default function Footer() {
 					<a className={styles.footerNote}>LinkedIn</a>
 				</div>
 				<div>
-					<p>Explore</p>
+					<p className={styles.footerNoteTitle}>Explore</p>
 					<a className={styles.footerNote}>Product features</a>
 					<a className={styles.footerNote}>Prototyping features</a>
 					<a className={styles.footerNote}>Product process</a>
@@ -37,7 +37,7 @@ export default function Footer() {
 					<a className={styles.footerNote}>Contact</a>
 				</div>
 				<div>
-					<p>Resources</p>
+					<p className={styles.footerNoteTitle}>Resources</p>
 					<a className={styles.footerNote}>Blog</a>
 					<a className={styles.footerNote}>Best practices</a>
 					<a className={styles.footerNote}>Support</a>
@@ -51,7 +51,7 @@ export default function Footer() {
 					<a className={styles.footerNote}>Privacy</a>
 				</div>
 				<div>
-					<p>Use Cases</p>
+					<p className={styles.footerNoteTitle}>Use Cases</p>
 					<a className={styles.footerNote}>Example One</a>
 					<a className={styles.footerNote}>Example Two</a>
 					<a className={styles.footerNote}>Example Three</a>
