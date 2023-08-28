@@ -28,7 +28,9 @@
 }
 
 .backButton:hover {
-    transform: scale(1.05);
+    transform: translateX(-1px);
+    background-color: rgb(235, 129, 0);
+    color: rgb(245,245,245)
 }
 
 .tagContainer {
