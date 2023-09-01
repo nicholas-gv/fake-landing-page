@@ -12,7 +12,7 @@ export default function Events() {
 	const images = importAll((require as any).context("public/event-images", false, /\.(png|jpe?g|svg)$/));
 
 	useEffect(() => {
-		fetch("/api/data")
+		fetch("/db.json")
 			.then((response) => response.json())
 			.then((data) => setData(data.data))
 			.catch((error) => console.error("Error:", error));
