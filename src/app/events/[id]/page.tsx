@@ -12,7 +12,7 @@ export default function Page() {
 
 
 	useEffect(() => {
-		fetch("/api/data")
+		fetch("/db.json")
 			.then((response) => response.json())
 			.then((data) => setData(data.data[eventID]))
 			.catch((error) => console.error("Error:", error));
