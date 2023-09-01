@@ -8,14 +8,15 @@ import Link from "next/link";
 
 export default function Page() {
 	const [data, setData] = useState<EventData>();
-	const pathname = usePathname();
+	const eventID = Number.parseInt(usePathname().replace("/events/", ""))-1
+
 
 	useEffect(() => {
-		fetch(`/api/data/${pathname.replace("/events/", "")}`)
+		fetch("/api/data")
 			.then((response) => response.json())
-			.then((data) => setData(data))
+			.then((data) => setData(data.data[eventID]))
 			.catch((error) => console.error("Error:", error));
-	}, [pathname]);
+	}, [eventID]);
 
 	return (
 		<>
@@ -26,7 +27,7 @@ export default function Page() {
 					</Link>
 					<h1 className={styles.title}>{data.title}</h1>
 					<div className={styles.tagContainer}>
-						{JSON.parse(data.tags).map((element: string, i: number) => (
+						{data.tags.map((element: string, i: number) => (
 							<p key={i}>{element}</p>
 						))}
 					</div>

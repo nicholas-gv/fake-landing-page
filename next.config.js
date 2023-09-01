@@ -5,12 +5,8 @@ module.exports = {
 		return [
 			{
 				source: "/api/data",
-				destination: "http://localhost:8000/api/data",
+				destination: "/db.json",
 			},
-            {
-                source: '/api/data/:number', 
-                destination: 'http://localhost:8000/api/data/:number', 
-              },
 		];
 	},
 };

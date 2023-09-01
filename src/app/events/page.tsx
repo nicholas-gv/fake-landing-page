@@ -14,7 +14,7 @@ export default function Events() {
 	useEffect(() => {
 		fetch("/api/data")
 			.then((response) => response.json())
-			.then((data) => setData(data))
+			.then((data) => setData(data.data))
 			.catch((error) => console.error("Error:", error));
 	}, []);
 
