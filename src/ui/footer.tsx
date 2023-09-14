@@ -1,69 +1,73 @@
-import styles from "./footer.module.css";
 import Image from "next/image";
 import NGLogo from "@/public/NG-Fake-Products-150.png";
 
 export default function Footer() {
-	return (
-		<footer className={styles.footer}>
-			<div className={styles.footerInnerContainer}>
-				<div className={styles.companySection}>
-					<Image src={NGLogo} alt="NG-Fake-Products-logo" width={150} height={46}></Image>
-					<p className={styles.footerNote}>
-						{" "}
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus cum eveniet sed
-						doloremque, quo nulla omnis deserunt eaque molestiae obcaecati quis quod delectus
-						debitis! Asperiores, eveniet mollitia?
-					</p>
-				</div>
-				<div>
-					<p className={styles.footerNoteTitle}>Social Media</p>
-					<a className={styles.footerNote}>Facebook</a>
-					<a className={styles.footerNote}>Instagram</a>
-					<a className={styles.footerNote}>Youtube</a>
-					<a className={styles.footerNote}>Twitter</a>
-					<a className={styles.footerNote}>LinkedIn</a>
-				</div>
-				<div>
-					<p className={styles.footerNoteTitle}>Explore</p>
-					<a className={styles.footerNote}>Product features</a>
-					<a className={styles.footerNote}>Prototyping features</a>
-					<a className={styles.footerNote}>Product process</a>
-					<a className={styles.footerNote}>Pricing</a>
-					<a className={styles.footerNote}>Enterprise</a>
-					<a className={styles.footerNote}>Organization</a>
-					<a className={styles.footerNote}>Professional</a>
-					<a className={styles.footerNote}>Customers</a>
-					<a className={styles.footerNote}>Security</a>
-					<a className={styles.footerNote}>Contact</a>
-				</div>
-				<div>
-					<p className={styles.footerNoteTitle}>Resources</p>
-					<a className={styles.footerNote}>Blog</a>
-					<a className={styles.footerNote}>Best practices</a>
-					<a className={styles.footerNote}>Support</a>
-					<a className={styles.footerNote}>Resource library</a>
-					<a className={styles.footerNote}>Downloads</a>
-					<a className={styles.footerNote}>What&apos;s new</a>
-					<a className={styles.footerNote}>Releases</a>
-					<a className={styles.footerNote}>Careers</a>
-					<a className={styles.footerNote}>Partners</a>
-					<a className={styles.footerNote}>Our story</a>
-					<a className={styles.footerNote}>Privacy</a>
-				</div>
-				<div>
-					<p className={styles.footerNoteTitle}>Use Cases</p>
-					<a className={styles.footerNote}>Example One</a>
-					<a className={styles.footerNote}>Example Two</a>
-					<a className={styles.footerNote}>Example Three</a>
-					<a className={styles.footerNote}>Example Four</a>
-					<a className={styles.footerNote}>Example Five</a>
-					<a className={styles.footerNote}>Example Six</a>
-					<a className={styles.footerNote}>Example Seven</a>
-					<a className={styles.footerNote}>Example Eight</a>
-					<a className={styles.footerNote}>Example Nine</a>
-				</div>
-			</div>
-			<div className={styles.footerBottom}></div>
-		</footer>
-	);
+  return (
+    <footer className="border-t-2 border-green border-solid w-full">
+      <div className="
+        flex justify-between max-w-[1000px] mx-auto flex-wrap px-4 [&>*]:mt-16 
+        max-lg:grid max-lg:max-w-[600px] max-lg:grid-cols-4 max-lg:grid-rows-1
+        max-[700px]:grid-cols-2 max-[700px]:[&>div:not(:first-child)]:text-center max-[450px]:grid-cols-1
+        ">
+        <div className="
+          max-w-[260px] mt-16 max-lg:grid max-lg:col-span-4 max-lg:text-left max-lg:mx-auto
+          max-[700px]:col-span-2 max-[450px]:col-span-1
+          ">
+          <Image src={NGLogo} alt="NG-Fake-Products-logo" width={150} height={46} />
+          <p className="text-sm mt-3">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus cum eveniet sed doloremque, quo nulla omnis deserunt eaque molestiae obcaecati quis quod delectus debit
+            is! Asperiores, eveniet mollitia?
+          </p>
+        </div>
+        <div className="[&>a]:text-sm [&>a]:mt-2 flex flex-col">
+          <p className="text-base font-semibold">Social Media</p>
+          <a>Facebook</a>
+          <a>Instagram</a>
+          <a>Youtube</a>
+          <a>Twitter</a>
+          <a>LinkedIn</a>
+        </div>
+        <div className="[&>a]:text-sm [&>a]:mt-2 flex flex-col">
+          <p className="text-base font-semibold">Explore</p>
+          <a>Product features</a>
+          <a>Prototyping features</a>
+          <a>Product process</a>
+          <a>Pricing</a>
+          <a>Enterprise</a>
+          <a>Organization</a>
+          <a>Professional</a>
+          <a>Customers</a>
+          <a>Security</a>
+          <a>Contact</a>
+        </div>
+        <div className="[&>a]:text-sm [&>a]:mt-2 flex flex-col">
+          <p className="text-base font-semibold">Resources</p>
+          <a>Blog</a>
+          <a>Best practices</a>
+          <a>Support</a>
+          <a>Resource library</a>
+          <a>Downloads</a>
+          <a>Whats new</a>
+          <a>Releases</a>
+          <a>Careers</a>
+          <a>Partners</a>
+          <a>Our story</a>
+          <a>Privacy</a>
+        </div>
+        <div className="[&>a]:text-sm [&>a]:mt-2 flex flex-col">
+          <p className="text-base font-semibold">Use Cases</p>
+          <a>Example One</a>
+          <a>Example Two</a>
+          <a>Example Three</a>
+          <a>Example Four</a>
+          <a>Example Five</a>
+          <a>Example Six</a>
+          <a>Example Seven</a>
+          <a>Example Eight</a>
+          <a>Example Nine</a>
+        </div>
+      </div>
+      <div className="w-full bg-green mt-[50px] h-8"></div>
+    </footer>
+  );
 }
