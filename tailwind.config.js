@@ -15,6 +15,9 @@ module.exports = {
         'purple':'#9a00ee',
         'red':'#f30000',
       }, 
+      fontFamily: {
+        'roboto-medium': ['roboto-medium'],
+      }
     }
   },
   plugins: [],
