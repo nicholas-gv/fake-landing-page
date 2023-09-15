@@ -16,29 +16,29 @@ export default function Contact() {
 				<section className={styles.sectionMiddle}>
 					<p className={styles.bigFont}>Frequently Requested Info</p>
 					<div className={styles.sectionMiddleGrid}>
-						<InfoCard title="NG Support" href="/">
+						<InfoCard title="NG Support" href="/contact">
 							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, illum?
 						</InfoCard>
-						<InfoCard title="NG Products" href="/">
+						<InfoCard title="NG Products" href="/contact">
 							Lorem ipsum dolor sit amet consectetur.
 						</InfoCard>
-						<InfoCard title="Find a Store" href="/">
+						<InfoCard title="Find a Store" href="/contact">
 							Lorem ipsum dolor sit amet consectetur adipisicing.
 						</InfoCard>
-						<InfoCard title="Email Subscriptions" href="/">
+						<InfoCard title="Email Subscriptions" href="/contact">
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam!
 						</InfoCard>
-						<InfoCard title="User Groups" href="/">
+						<InfoCard title="User Groups" href="/contact">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quas voluptatum
 							saepe neque, corporis enim?
 						</InfoCard>
-						<InfoCard title="Media and Analyst Info" href="/">
+						<InfoCard title="Media and Analyst Info" href="/contact">
 							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum.
 						</InfoCard>
 					</div>
 				</section>
 				<section className={styles.sectionBottom}>
-					<InfoCard title="Feedback" href="/">
+					<InfoCard title="Feedback" href="/contact">
 						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, excepturi voluptatibus
 						laboriosam enim praesentium cumque eveniet maxime odit porro soluta!
 					</InfoCard>

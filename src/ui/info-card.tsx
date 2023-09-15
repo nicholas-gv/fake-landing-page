@@ -1,4 +1,3 @@
-import styles from "./info-card.module.css";
 import Link from "next/link";
 
 export default function InfoCard({
@@ -11,13 +10,13 @@ export default function InfoCard({
 	href: string;
 }) {
 	return (
-		<div className={styles.infoCardContainer}>
-			<p className={styles.title}>{title}</p>
-			<p className={styles.description}>{children}</p>
-			<Link className={styles.link} href={href}>
+		<div className="my-5 py-5">
+			<p className="text-lg font-bold">{title}</p>
+			<p className="mt-2 mb-3">{children}</p>
+			<Link href={href} className="!text-blue hover:underline hover:underline-offset-2">
 				Learn More
 			</Link>
-			<span className={styles.gt}>&gt;</span>
+			<span className="text-blue ml-1">&gt;</span>
 		</div>
 	);
 }
