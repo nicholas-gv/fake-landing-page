@@ -1,6 +1,5 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
-import styles from "./page.module.css";
 import Navbar from "@/ui/navbar";
 import Footer from "@/ui/footer";
 
@@ -15,7 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html lang="en">
 			<body className={inter.className}>
-				<header className={styles.header}>
+				<header className="flex content-center bg-white min-h-[100px] px-10 border-b-2 border-solid border-green mb-10">
 					<Navbar></Navbar>
 				</header>
 				<main>{children}</main>
