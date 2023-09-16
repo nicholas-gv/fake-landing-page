@@ -21,7 +21,7 @@ export default function LandingPageSegment({
 				flex justify-around items-center w-full min-h-[590px] max-[820px]:flex-col max-[820px]:my-[50]`}
 		>
 			<div className="max-[820px]:text-center">
-				<h2 className="mb-[15px] text-5xl">{title}</h2>
+				<h2 className="mb-[15px] text-5xl max-[350px]:text-4xl">{title}</h2>
 				<p className="mb-[25px] text-lg max-[640px]:text-md max-[640px]:leading-5 
 				max-[820px]:max-w-[550px] max-[640px]:max-w-[350px] mx-auto">
 					{description}

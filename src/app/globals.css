@@ -116,6 +116,14 @@ th {
 	transform: translateY(-2px);
 }
 
+.buttonPrimary:hover {
+	background-color: #eb8100;
+}
+
+.buttonSecondary:hover {
+	background-color: #007200;
+}
+
 .pageTitle {
 	text-align: center;
 	margin-bottom: 50px;
