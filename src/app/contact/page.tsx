@@ -1,21 +1,20 @@
-import styles from "./page.module.css";
 import InfoCard from "@/ui/info-card";
 
 export default function Contact() {
 	return (
 		<div>
 			<h1 className="pageTitle">Contacting NG Fake Products</h1>
-			<div className={styles.contact}>
-				<section className={styles.sectionTop}>
-					<p className={styles.bigFont}>Corporate Address</p>
+			<div className="max-w-[980px] bg-[#f5f5f5] rounded-lg border-gray-300 border border-solid py-7 mx-auto mb-16 mt-28 [&>*>p]:leading-6">
+				<section className="text-center mb-8 [&>:not(:first-child)]:text-xl">
+					<p className="text-[28px] mb-10">Corporate Address</p>
 					<p>NG Fake Products</p>
 					<p>Street Address</p>
 					<p>City, Precinct</p>
 					<p>(999) 99-9999999</p>
 				</section>
-				<section className={styles.sectionMiddle}>
-					<p className={styles.bigFont}>Frequently Requested Info</p>
-					<div className={styles.sectionMiddleGrid}>
+				<section className="border-t border-gray-300 border-solid py-8 px-5">
+					<p className="text-[28px] mb-10">Frequently Requested Info</p>
+					<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-20 px-5">
 						<InfoCard title="NG Support" href="/contact">
 							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, illum?
 						</InfoCard>
@@ -37,7 +36,7 @@ export default function Contact() {
 						</InfoCard>
 					</div>
 				</section>
-				<section className={styles.sectionBottom}>
+				<section className="border-t border-gray-300 border-solid py-8 px-5">
 					<InfoCard title="Feedback" href="/contact">
 						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, excepturi voluptatibus
 						laboriosam enim praesentium cumque eveniet maxime odit porro soluta!

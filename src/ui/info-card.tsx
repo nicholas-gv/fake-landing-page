@@ -16,7 +16,7 @@ export default function InfoCard({
 			<Link href={href} className="!text-blue hover:underline hover:underline-offset-2">
 				Learn More
 			</Link>
-			<span className="text-blue ml-1">&gt;</span>
+			<span className="text-blue ml-1 font-semibold">&gt;</span>
 		</div>
 	);
 }
