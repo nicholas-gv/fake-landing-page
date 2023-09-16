@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face { 
 	font-family: roboto-medium; 
 	src: url("../../public/Roboto-Medium.ttf"); 
@@ -110,6 +114,14 @@ th {
 
 .buttonPrimary:hover, .buttonSecondary:hover, .buttonTertiary:hover {
 	transform: translateY(-2px);
+}
+
+.buttonPrimary:hover {
+	background-color: #eb8100;
+}
+
+.buttonSecondary:hover {
+	background-color: #007200;
 }
 
 .pageTitle {

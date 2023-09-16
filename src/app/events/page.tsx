@@ -2,7 +2,6 @@
 
 import EventCard from "@/ui/event-card";
 import Image from "next/image";
-import styles from "./page.module.css";
 import { useEffect, useState } from "react";
 import { EventData } from "@/types/eventData";
 
@@ -21,7 +20,7 @@ export default function Events() {
 	return (
 		<>
 			<h1 className="pageTitle">Events</h1>
-			<div className={styles.cardContainer}>
+			<div className="flex justify-center flex-wrap mb-20 [&>*]:m-2">
 				{data.length !== 0 &&
 					data.map((element, i) => (
 						<EventCard

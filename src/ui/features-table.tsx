@@ -1,9 +1,7 @@
-import styles from "./features-table.module.css";
-
 export default function FeaturesTable({ data }: { data: Array<Array<string | React.ReactNode>> }) {
 	return (
 		<table>
-			<thead className={styles.tableHead}>
+			<thead className="sticky top-0 bg-white">
 				<tr>{data && data[0].map((element, i) => <th key={i}>{element}</th>)}</tr>
 			</thead>
 			<tbody>
@@ -11,7 +9,7 @@ export default function FeaturesTable({ data }: { data: Array<Array<string | Rea
 					data.slice(1).map((element, i) => (
 						<tr key={i}>
 							{data.slice(1)[i].map((nestedElement, j) => (
-								<td key={j}>{nestedElement}</td>
+								<td className="[&>*]:inline" key={j}>{nestedElement}</td>
 							))}
 						</tr>
 					))}
