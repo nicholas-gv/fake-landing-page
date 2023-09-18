@@ -2,33 +2,35 @@
 
 import EventCard from "@/ui/event-card";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import { EventData } from "@/types/eventData";
+import { useEventData } from "@/api/eventDataFetcher";
 
 export default function Events() {
-	const [data, setData] = useState<Array<EventData>>([]);
 	const importAll = (r: any) => r.keys().map(r);
 	const images = importAll((require as any).context("public/event-images", false, /\.(png|jpe?g|svg)$/));
 
-	useEffect(() => {
-		fetch("/db.json")
-			.then((response) => response.json())
-			.then((data) => setData(data.data))
-			.catch((error) => console.error("Error:", error));
-	}, []);
+	const { eventData, isLoading, isError } = useEventData()
+
+	if (isError) {
+		console.error("Error:", isError);
+  	}
+
+	if (isLoading) {
+		return "Loading...";
+	}
 
 	return (
 		<>
 			<h1 className="pageTitle">Events</h1>
 			<div className="flex justify-center flex-wrap mb-20 [&>*]:m-2">
-				{data.length !== 0 &&
-					data.map((element, i) => (
+				{eventData.length !== 0 &&
+					eventData.map((element: EventData, i: number) => (
 						<EventCard
 							image={<Image src={images[i].default} alt={`event-${i + 1}-thumbnail`}></Image>}
 							title={element.title}
 							description={`${element.body.slice(0, 320)}...`}
 							key={i}
-							eventKey={i + 1}
+							eventKey={i}
 						></EventCard>
 					))}
 			</div>
