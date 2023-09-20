@@ -1,9 +1,11 @@
+import axios from "axios";
 import useSWR from "swr";
 
-const fetcher = (url: string) => fetch(url).then((res) => res.json());
+const fetcher = (url: string) => axios.get(url).then((res) => res.data);
 
 export function useEventData(eventID?: number) {
     const { data, error, isLoading} = useSWR(`/db.json`, fetcher);
+
     let eventData;
 
     if (eventID !== null && eventID !== undefined) {
@@ -15,6 +17,6 @@ export function useEventData(eventID?: number) {
     return {
         eventData,
         isLoading: isLoading,
-        isError: error,
+        error,
     };
 }

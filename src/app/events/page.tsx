@@ -9,10 +9,10 @@ export default function Events() {
 	const importAll = (r: any) => r.keys().map(r);
 	const images = importAll((require as any).context("public/event-images", false, /\.(png|jpe?g|svg)$/));
 
-	const { eventData, isLoading, isError } = useEventData()
+	const { eventData, isLoading, error } = useEventData()
 
-	if (isError) {
-		console.error("Error:", isError);
+	if (error) {
+		console.error("Error:", error);
   	}
 
 	if (isLoading) {
