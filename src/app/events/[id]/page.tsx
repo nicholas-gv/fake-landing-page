@@ -6,10 +6,10 @@ import { useEventData } from "@/api/eventDataFetcher";
 
 export default function Page() {
 	const eventID = Number.parseInt(usePathname().replace("/events/", ""));
-	const { eventData, isLoading, isError } = useEventData(eventID);
+	const { eventData, isLoading, error } = useEventData(eventID);
 
-	if (isError) {
-		console.error("Error:", isError);
+	if (error) {
+		console.error("Error:", error);
 	}
 
 	if (isLoading) {
