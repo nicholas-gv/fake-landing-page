@@ -1,22 +1,29 @@
 import axios from "axios";
 import useSWR from "swr";
 
-const fetcher = (url: string) => axios.get(url).then((res) => res.data);
-
-export function useEventData(eventID?: number) {
-    const { data, error, isLoading} = useSWR(`/db.json`, fetcher);
-
-    let eventData;
-
-    if (eventID !== null && eventID !== undefined) {
-        eventData = data?.data[eventID];
-    } else {
-        eventData = data?.data;
+const getEventsAll = async (url: string) => {
+    try {
+        const response = await axios.get(url)
+        return response.data.data;    
+    } catch (error) {
+        throw error;
     }
+};
 
-    return {
-        eventData,
-        isLoading: isLoading,
-        error,
-    };
+const getEventsByID = async (url: string, id: number) => {
+    try {
+        const response = await axios.get(url);
+        return response.data.data[id];       
+    } catch (error) {
+        throw error;
+    }
+};
+
+export function useFetchEvents() {
+	return {
+		GetEventsAll: () => 
+			useSWR("/db.json", getEventsAll),
+		GetEventsByID: (eventID: number) =>
+			useSWR(["/db.json", eventID], ([url, eventID]) => getEventsByID(url, eventID)),
+	};
 }
