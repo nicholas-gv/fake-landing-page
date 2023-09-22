@@ -12,11 +12,11 @@ export default function Events() {
 	const { data, error, isLoading } = useFetchEvents().GetEventsAll();
 
 	if (error) {
-		console.error("Error:", error);
+		return <p className="text-center my-20 text-lg text-red">Error fetching data, try again.</p>
   	}
 
 	if (isLoading) {
-		return "Loading...";
+		return <p className="text-center my-20 text-lg">Loading...</p>;
 	}
 
 	return (

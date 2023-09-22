@@ -6,7 +6,7 @@ const getEventsAll = async (url: string) => {
         const response = await axios.get(url)
         return response.data.data;    
     } catch (error) {
-        console.error("Error fetching data:", error)
+        throw error;
     }
 };
 
@@ -15,7 +15,7 @@ const getEventsByID = async (url: string, id: number) => {
         const response = await axios.get(url);
         return response.data.data[id];       
     } catch (error) {
-        console.error("Error fetching data:", error)
+        throw error;
     }
 };
 
