@@ -3,13 +3,13 @@
 import EventCard from "@/ui/event-card";
 import Image from "next/image";
 import { EventData } from "@/types/eventData";
-import { useEventData } from "@/api/eventDataFetcher";
+import { useFetchEvents } from "@/api/eventDataFetcher";
 
 export default function Events() {
 	const importAll = (r: any) => r.keys().map(r);
 	const images = importAll((require as any).context("public/event-images", false, /\.(png|jpe?g|svg)$/));
 
-	const { eventData, isLoading, error } = useEventData()
+	const { data, error, isLoading } = useFetchEvents().GetEventsAll();
 
 	if (error) {
 		console.error("Error:", error);
@@ -23,8 +23,8 @@ export default function Events() {
 		<>
 			<h1 className="pageTitle">Events</h1>
 			<div className="flex justify-center flex-wrap mb-20 [&>*]:m-2">
-				{eventData.length !== 0 &&
-					eventData.map((element: EventData, i: number) => (
+				{data && data.length !== 0 &&
+					data.map((element: EventData, i: number) => (
 						<EventCard
 							image={<Image src={images[i].default} alt={`event-${i + 1}-thumbnail`}></Image>}
 							title={element.title}
