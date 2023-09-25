@@ -3,19 +3,18 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useFetchEvents } from "@/api/eventDataFetcher";
+import Loading from "@/app/loading";
 
 export default function Page() {
 	const eventID = Number.parseInt(usePathname().replace("/events/", ""));
-	
 	const { data, error, isLoading } = useFetchEvents().GetEventsByID(eventID);
 
-
 	if (error) {
-		return <p className="text-center my-20 text-lg text-red">Error fetching data, try again.</p>
+		return <p className="text-center my-20 text-lg text-red">Error fetching data, trying again...</p>
   	}
 
 	if (isLoading) {
-		return <p className="text-center my-20 text-lg">Loading...</p>;
+		return <Loading/>
 	}
 
 	return (
