@@ -1,6 +1,8 @@
 import axios from "axios";
 import useSWR from "swr";
 
+const JSON_DB_URL = "/db.json"
+
 const getEventsAll = async (url: string) => {
     try {
         const response = await axios.get(url)
@@ -22,8 +24,8 @@ const getEventsByID = async (url: string, id: number) => {
 export function useFetchEvents() {
 	return {
 		GetEventsAll: () => 
-			useSWR("/db.json", getEventsAll),
+			useSWR(JSON_DB_URL, getEventsAll),
 		GetEventsByID: (eventID: number) =>
-			useSWR(["/db.json", eventID], ([url, eventID]) => getEventsByID(url, eventID)),
+			useSWR([JSON_DB_URL, eventID], ([url, eventID]) => getEventsByID(url, eventID)),
 	};
 }

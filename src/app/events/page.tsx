@@ -4,19 +4,19 @@ import EventCard from "@/ui/event-card";
 import Image from "next/image";
 import { EventData } from "@/types/eventData";
 import { useFetchEvents } from "@/api/eventDataFetcher";
+import Loading from "../loading";
 
 export default function Events() {
 	const importAll = (r: any) => r.keys().map(r);
 	const images = importAll((require as any).context("public/event-images", false, /\.(png|jpe?g|svg)$/));
-
 	const { data, error, isLoading } = useFetchEvents().GetEventsAll();
 
 	if (error) {
-		return <p className="text-center my-20 text-lg text-red">Error fetching data, try again.</p>
+		return <p className="text-center my-20 text-lg text-red">Error fetching data, trying again.</p>
   	}
 
 	if (isLoading) {
-		return <p className="text-center my-20 text-lg">Loading...</p>;
+		return <Loading/>;
 	}
 
 	return (
