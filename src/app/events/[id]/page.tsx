@@ -4,17 +4,18 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useFetchEvents } from "@/api/eventDataFetcher";
 import Loading from "@/app/loading";
+import ErrorTryingAgainMessage from "@/ui/error-trying-again-message";
 
 export default function Page() {
 	const eventID = Number.parseInt(usePathname().replace("/events/", ""));
 	const { data, error, isLoading } = useFetchEvents().GetEventsByID(eventID);
 
 	if (error) {
-		return <p className="text-center my-20 text-lg text-red">Error fetching data, trying again...</p>
-  	}
+		return <ErrorTryingAgainMessage/>
+	}
 
 	if (isLoading) {
-		return <Loading/>
+		return <Loading />;
 	}
 
 	return (

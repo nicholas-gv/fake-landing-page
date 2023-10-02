@@ -5,6 +5,7 @@ import Image from "next/image";
 import { EventData } from "@/types/eventData";
 import { useFetchEvents } from "@/api/eventDataFetcher";
 import Loading from "../loading";
+import ErrorTryingAgainMessage from "@/ui/error-trying-again-message";
 
 export default function Events() {
 	const importAll = (r: any) => r.keys().map(r);
@@ -12,8 +13,8 @@ export default function Events() {
 	const { data, error, isLoading } = useFetchEvents().GetEventsAll();
 
 	if (error) {
-		return <p className="text-center my-20 text-lg text-red">Error fetching data, trying again.</p>
-  	}
+		return <ErrorTryingAgainMessage/>
+	}
 
 	if (isLoading) {
 		return <Loading/>;
