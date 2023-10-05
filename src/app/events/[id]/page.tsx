@@ -4,14 +4,14 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useFetchEvents } from "@/api/eventDataFetcher";
 import Loading from "@/app/loading";
-import ErrorTryingAgainMessage from "@/ui/error-trying-again-message";
+import ErrorMessage from "@/ui/error-message";
 
 export default function Page() {
 	const eventID = Number.parseInt(usePathname().replace("/events/", ""));
 	const { data, error, isLoading } = useFetchEvents().GetEventsByID(eventID);
 
 	if (error) {
-		return <ErrorTryingAgainMessage/>
+		return <ErrorMessage AxiosError={error}/>;
 	}
 
 	if (isLoading) {
