@@ -31,9 +31,13 @@ export function useFetchEvents() {
 	}, []);
 
 	return {
-		GetEventsAll: () => 
-            useSWR(JSON_DB_URL, (url) => getEventsAll(url, controller)),
+		GetEventsAll: () =>
+			useSWR(JSON_DB_URL, (url) => getEventsAll(url, controller), {
+				revalidateOnFocus: false,
+			}),
 		GetEventsByID: (eventID: number) =>
-			useSWR([JSON_DB_URL, eventID], ([url, eventID]) => getEventsByID(url, eventID, controller)),
+			useSWR([JSON_DB_URL, eventID], ([url, eventID]) => getEventsByID(url, eventID, controller), {
+				revalidateOnFocus: false,
+			}),
 	};
 }
