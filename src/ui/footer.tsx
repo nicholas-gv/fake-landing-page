@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="border-t-2 border-green border-solid w-full">
       <div className="
-        flex justify-between max-w-[1000px] mx-auto flex-wrap px-4 [&>*]:mt-16 
+        flex justify-between max-w-[1000px] mx-auto flex-wrap px-4 [&>*]:mt-16 [&_a]:cursor-pointer
         max-lg:grid max-lg:max-w-[600px] max-lg:grid-cols-4 max-lg:grid-rows-1
         max-[700px]:grid-cols-2 max-[700px]:[&>div:not(:first-child)]:text-center max-[450px]:grid-cols-1
         ">
